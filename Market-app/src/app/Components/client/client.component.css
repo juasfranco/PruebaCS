@@ -1,0 +1,15 @@
+.perf-btn{
+    background-color:#153e90;
+    padding: 1% 3%;
+}
+
+.fas.fa-plus{
+    padding-right: 10%;
+    color: chartreuse;
+}
+
+.clIcon{
+    font-size: 2rem;
+    padding-left: 2%;
+    color: #153e90;
+}

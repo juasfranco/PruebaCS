@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>{{client !=null ? 'Editar Usario':'Nuevo Usuario'}}</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput [(ngModel)]="email">
+    </mat-form-field>
+</div>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Dirección</mat-label>
+        <input matInput [(ngModel)]="address">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Celular</mat-label>
+        <input matInput [(ngModel)]="phone">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="closeDialog()">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="client !=null ? editClient() : addClient()">Guardar</button>
+</div>

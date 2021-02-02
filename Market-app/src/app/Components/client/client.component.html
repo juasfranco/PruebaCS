@@ -1,0 +1,45 @@
+<h1>Clientes
+    <i class="fas fa-child clIcon"></i>
+    <i class="fas fa-male clIcon"></i>
+    <i class="fas fa-store-alt clIcon"></i>
+</h1>
+<hr>
+<div class="bg-light p-5 rounded mt-3">
+    <h1>Crear un nuevo Cliente</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nisi ratione doloremque quod
+        voluptates culpa nam, eius et, facilis at asperiores, debitis quia nemo eligendi neque qui saepe fuga quos?</p>
+    <button mat-raised-button color="primary" class="perf-btn" (click)="openAdd()">
+        <i class="fas fa-plus"></i>Nuevo</button>
+</div>
+
+<div class="bg-light p-5 rounded mt-3">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let element of clientList">
+                <th scope="row">{{element.id}}</th>
+                <td>{{element.clientName}}</td>
+                <td>{{element.clientEmail}}</td>
+                <td>{{element.clientAddress}}</td>
+                <td>{{element.clientPhone}}</td>
+                <td>{{element.clientStatus}}</td>
+                <td>
+                    <button (click)="openEdit(element)" mat-raised-button color="primary">
+                        <i class="far fa-edit"></i></button> |
+                    <button (click)="delete(element)" mat-raised-button color="warn"><i
+                            class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
